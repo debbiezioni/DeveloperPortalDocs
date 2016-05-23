@@ -10,7 +10,7 @@ Building video experiences consists of ingesting media files, playing back video
 
 The guides on this site, together with the [Kaltura Developer Tools](https://developer.kaltura.com), enable you to get started building your own video experiences and workflows, and provide you with everything you need to further explore the platform's capabilities and to become an expert.  
 
-To get started, let's review the foundational building blocks of a video experience. 
+To get started, let's review the building blocks of a video experience. 
 
 ## Your Kaltura Account ID (PartnerId)  
 
@@ -30,7 +30,7 @@ There are three methods for generating a Kaltura Session:
 * Calling [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password.
 * Using the [appToken service](https://developer.kaltura.com/api-docs/#/appToken): This method is recommended providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
 
-> To learn more about the Kaltura Session, its algorithm, guidelines and options read the [Kaltura API Authentication and Security article](https://knowledge.kaltura.com/node/229).
+> To learn more about the Kaltura Session, its algorithm, guidelines and options, read the [Kaltura API Authentication and Security article](https://knowledge.kaltura.com/node/229).
 
 ## Uploading your Media Files  
 
@@ -38,9 +38,9 @@ Media files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wi
 You can implement an upload flow by using a Kaltura tested JavaScript widget for web pages, or by implementing direct calls to the API.  
 Alternatively, Kaltura also provides methods for bulk-ingest and import of content. To learn more, read the [Kaltura Bulk Content Ingestion API article](https://vpaas.kaltura.com/documentation/02_Media-Ingest-and-Preperation/Bulk-Content-Ingestion.html).
 
->  Note: Kaltura manages all forms of media files, including video, image, and audio files. It even provides APIs to host, deliver and process document files, such as PDF and PPT files, to create rich experiences such as synchronized side-by-side video and presentation slides.
+>  Note: Kaltura manages all forms of media files, including video, image, and audio files. Kaltura also provides APIs to host, deliver and process document files, such as PDF and PPT files, to create rich experiences such as synchronized side-by-side video and presentation slides.
 
-Which method you chose to implement depends on your application needs. The following are the two main methods for uploading files.
+The method you chose to implement depends on your application needs. The following are the two main methods for uploading files:
 
 ### Upload Files Using JavaScript with the jQuery Upload Widget  
 
@@ -67,9 +67,9 @@ Follow the recipe below to get learn how to use the file upload API:
 
 ## Working with Media Entries  
 
-After uploading your file, you will have created a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
+After uploading your file, you will have created a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action. Assign the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
-Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
+Now that you have content in your account, you will want to implement a library search to create galleries or search for media. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
 
 ### Searching Entries - media.list  
 Note that you can combine several filter parameters together to further narrow down your search results. 
